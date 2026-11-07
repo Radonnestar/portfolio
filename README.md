@@ -1,16 +1,64 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A personal portfolio styled as a nostalgic retro desktop OS: a pixel-art meadow wallpaper, a beige CRT computer you switch on, draggable windows, a taskbar, and a sleepy kid lying in the grass.
 
-Currently, two official plugins are available:
+> 🚧 Work in progress. Content is placeholder and will be filled in soon.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live site:** _coming soon_
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Retro OS desktop with draggable, minimizable and maximizable windows
+- Pixel-art icons: About, Projects, Skills, Experience, Education, Research, Contact
+- Animated wallpaper (the character falls asleep when the computer is off)
+- Boot sequence, sound effects and a chiptune background loop (built with the Web Audio API)
+- Working contact form and projects list backed by a serverless API and Postgres
 
-## Expanding the Oxlint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Frontend:** React, Vite, Tailwind CSS v4
+- **Backend:** Vercel Functions (`/api`), Neon serverless Postgres, zod
+- **Hosting:** Vercel
+
+## Getting started
+
+```bash
+npm install
+npx vercel dev
+```
+
+`vercel dev` runs the site and the API together on `http://localhost:3000`. For the frontend only, use `npm run dev`.
+
+## Environment variables
+
+Create a `.env.local` file (never commit it) and set the same variables in your Vercel project:
+
+| Name | Purpose |
+|---|---|
+| `DATABASE_URL` | Neon Postgres connection string |
+| `ADMIN_TOKEN` | Secret token for the admin API routes |
+
+## Project structure
+
+```
+api/            Serverless endpoints (contact, projects, messages)
+backend/        Database helpers
+public/frames/  Wallpaper animation frames
+src/components/ Desktop, windows, taskbar, computer, icons
+src/data/       Portfolio content (edit this to make it yours)
+src/lib/        Sound engine
+```
+
+## Customizing
+
+Edit `src/data/portfolio.js` with your own name, bio, skills, experience, education, projects and research.
+
+## Deploy
+
+```bash
+npx vercel --prod
+```
+
+## License
+
+TBD
