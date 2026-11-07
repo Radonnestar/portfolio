@@ -94,27 +94,73 @@ export const education = [
   },
 ]
 
+// Images go in client/public/projects/ and are referenced as '/projects/<file>'
 export const projects = [
   {
-    title: 'Project One',
-    description: 'A short, punchy description of what it does and why it matters.',
-    tags: ['React', 'Node', 'SQLite'],
-    live: '#',
-    code: '#',
+    title: 'Nexora',
+    tagline: 'A modern, responsive website for a digital agency, with services, portfolio, pricing and contact.',
+    description:
+      'Nexora is a business website for a fictional digital agency offering web development, branding, UI/UX design and digital marketing. It presents the services, a portfolio, pricing plans, an about section and a contact form in a clean, fast layout that works on any screen size.',
+    details: [
+      'Services, portfolio, pricing, about and contact sections',
+      'Fully responsive from phone to desktop',
+      'Smooth, subtle animations',
+      'Clean, reusable component structure',
+    ],
+    tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Lucide React', 'Vercel'],
+    live: 'https://nexora-agency-website-seven.vercel.app/',
+    code: 'https://github.com/Radonnestar/nexora-agency-website',
+    images: ['/projects/nexora.png'],
   },
   {
-    title: 'Project Two',
-    description: 'Another project. Mention the problem you solved and the result.',
-    tags: ['Three.js', 'Vite'],
-    live: '#',
-    code: '#',
+    title: 'Saffron & Sage',
+    tagline: 'An elegant restaurant website with a menu, photo gallery and reservation enquiry form.',
+    description:
+      'Saffron & Sage is a website for a fictional restaurant. It shows the food menu and featured dishes, a photo gallery, opening hours and location, and lets guests send a reservation enquiry. The design is warm and refined, and it stays easy to use on a phone.',
+    details: [
+      'Menu with featured dishes',
+      'Photo gallery',
+      'Opening hours and location',
+      'Reservation enquiry form',
+      'Responsive layout',
+    ],
+    tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Lucide React', 'Vercel'],
+    live: 'https://saffron-sage-restaurant-website.vercel.app/',
+    code: 'https://github.com/Radonnestar/saffron-sage-restaurant-website',
+    images: ['/projects/saffron-sage.png'],
   },
   {
-    title: 'Project Three',
-    description: 'Something you are proud of. Keep it to one or two lines.',
-    tags: ['Tailwind', 'Express'],
-    live: '#',
-    code: '#',
+    title: 'TaskFlow',
+    tagline: 'A SaaS landing page with a working login and personal task dashboard, on a custom WordPress theme.',
+    description:
+      'TaskFlow is a landing page for a fictional productivity platform, and it is also a working app. Visitors can sign up, log in and manage their own tasks in a dashboard, with tasks stored in a custom database table and served through a secure REST API. The theme is hand-coded with no page builder, and has animated sections and a fast load time.',
+    details: [
+      "Signup and login using WordPress's own user system",
+      'Personal task dashboard backed by a custom database table and REST API',
+      'Hand-coded theme, no heavy page builders',
+      'Motion effects and strong Lighthouse scores',
+    ],
+    tags: ['WordPress', 'PHP', 'MySQL', 'Tailwind CSS v4', 'JavaScript', 'InfinityFree'],
+    live: 'https://taskflow-demo.infinityfree.me',
+    code: 'https://github.com/Radonnestar/taskflow-saas-landing-page',
+    images: ['/projects/taskflow.png'],
+  },
+  {
+    title: 'Stride',
+    tagline: 'A full-stack online shoe shop with accounts, checkout, order tracking and an admin dashboard.',
+    description:
+      'Stride is a demo online shoe shop built from scratch. Shoppers can browse and filter shoes, pick a size, check out and follow their orders, while an admin dashboard shows revenue, order status and stock. The storefront has custom animation and a day and dark theme, and the whole site scores 99, 96, 100 and 92 on Lighthouse.',
+    details: [
+      'Animated storefront with live stock per size',
+      'Accounts, cart, checkout and order history',
+      'Order tracking from confirmed to delivered or returned',
+      'Admin dashboard with revenue chart, order management and stock editing',
+      'Secure Node API with an order system that never oversells',
+    ],
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL (Supabase)', 'Vercel'],
+    live: 'https://stride-shop-six.vercel.app',
+    code: 'https://github.com/Radonnestar/stride-shop',
+    images: ['/projects/stride.png'],
   },
 ]
 
