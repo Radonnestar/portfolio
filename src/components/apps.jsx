@@ -31,6 +31,18 @@ function About() {
       {profile.bio.map((p, i) => (
         <p key={i}>{p}</p>
       ))}
+
+      {profile.achievements?.length > 0 && (
+        <div className="pt-1">
+          <Heading>[Achievements]</Heading>
+          <ul className="list-disc space-y-1 pl-5 text-slate-700">
+            {profile.achievements.map((a, i) => (
+              <li key={i}>{a}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="flex flex-wrap gap-2 pt-1">
         {profile.links.map((l) => (
           <a
@@ -117,29 +129,15 @@ function Projects() {
 }
 
 /* ---------------- Skills ---------------- */
-function Bar({ level }) {
-  const filled = Math.round(level / 10)
-  return (
-    <div className="flex gap-0.5">
-      {Array.from({ length: 10 }).map((_, i) => (
-        <span key={i} className={`h-2.5 w-3 ${i < filled ? 'bg-os-blue' : 'bg-slate-200'}`} />
-      ))}
-    </div>
-  )
-}
-
 function Skills() {
   return (
     <div className="space-y-4 p-4 text-sm text-slate-800">
       {skills.map((g) => (
         <div key={g.group}>
           <Heading>[{g.group}]</Heading>
-          <div className="space-y-1.5">
-            {g.items.map(([name, level]) => (
-              <div key={name} className="flex items-center justify-between gap-3">
-                <span className="font-pixel">{name}</span>
-                <Bar level={level} />
-              </div>
+          <div className="flex flex-wrap gap-1.5">
+            {g.items.map((name) => (
+              <Chip key={name}>{name}</Chip>
             ))}
           </div>
         </div>
@@ -200,9 +198,11 @@ function Research() {
             {r.venue} · {r.year}
           </p>
           <p className="mt-1 text-slate-700">{r.summary}</p>
-          <a href={r.link} target="_blank" rel="noreferrer" className={`${bevel} mt-2 inline-block px-3 py-1 font-pixel text-xs`}>
-            Read
-          </a>
+          {r.link && (
+            <a href={r.link} target="_blank" rel="noreferrer" className={`${bevel} mt-2 inline-block px-3 py-1 font-pixel text-xs`}>
+              Read
+            </a>
+          )}
         </div>
       ))}
     </div>
@@ -280,6 +280,6 @@ export const APPS = {
   skills: { title: 'Skills.config', icon: '⚙️', w: 420, Content: Skills },
   experience: { title: 'Experience.log', icon: '💼', w: 500, Content: Experience },
   education: { title: 'Education.doc', icon: '🎓', w: 460, Content: Education },
-  research: { title: 'Research.folder', icon: '📁', w: 520, Content: Research },
+  research: { title: 'Research.dir', icon: '📁', w: 520, Content: Research },
   contact: { title: 'Contact.exe', icon: '✉️', w: 440, Content: Contact },
 }

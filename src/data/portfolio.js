@@ -1,61 +1,96 @@
 export const profile = {
-  name: 'Your Name',
-  role: 'Full-stack developer & creative coder',
-  location: 'Your City, Country',
-  email: 'you@example.com',
+  name: 'Adnan Sami Srijon',
+  role: 'Full-stack developer & cybersecurity researcher',
+  location: 'Dhaka, Bangladesh',
+  email: 'adnansamisrijon@gmail.com',
   bio: [
-    "Hi! I'm a developer who loves building fast, playful web experiences with React, Node and a dash of 3D.",
-    'I enjoy turning ideas into polished products, from the database all the way to the pixels on screen.',
+    "I'm a Computer Science graduate from BRAC University with hands-on experience in frontend and backend development, alongside active research in cybersecurity, federated learning, and medical AI.",
+    "I build scalable, user-focused applications, and I'm passionate about learning new technologies and solving real-world problems through code.",
+  ],
+  achievements: [
+    'Two research papers accepted for presentation: IEEE SPICSCON 2026 and EMA4MICCAI 2026',
+    'Honourable Mention, Blockchain Olympiad Bangladesh 2025: finalist among 200+ teams across Bangladesh (AI category)',
+    'Finalist, CS Spectrum: Code Crush 2023, a competitive problem solving event by BRAC University Computer Club',
   ],
   links: [
-    { label: 'GitHub', href: 'https://github.com/your-username' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/your-username' },
-    { label: 'Email', href: 'mailto:you@example.com' },
+    { label: 'GitHub', href: 'https://github.com/Radonnestar' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/adnan-sami-srijon-394100263/' },
+    { label: 'Email', href: 'mailto:adnansamisrijon@gmail.com' },
   ],
 }
 
 export const skills = [
   {
-    group: 'Frontend',
-    items: [['React', 90], ['JavaScript', 88], ['Tailwind CSS', 90], ['Three.js', 65]],
+    group: 'Languages',
+    items: ['C', 'Java', 'Objective-C', 'C#', 'Python', 'JavaScript'],
   },
   {
-    group: 'Backend',
-    items: [['Node.js', 85], ['Express', 85], ['SQL / SQLite', 75], ['REST APIs', 88]],
+    group: 'Frameworks & Libraries',
+    items: [
+      'React',
+      'Node.js',
+      'Express.js',
+      'Spring Boot',
+      'Django',
+      'Tailwind CSS',
+      'Bootstrap',
+      'NumPy',
+      'Scikit-learn',
+      'Matplotlib',
+      'LangChain',
+      'LangGraph',
+      'Scanpy',
+      'MAGIC',
+      'OpenGL',
+    ],
+  },
+  {
+    group: 'Databases',
+    items: ['PostgreSQL', 'Supabase', 'MySQL'],
   },
   {
     group: 'Tools',
-    items: [['Git & GitHub', 85], ['VS Code', 90], ['Figma', 60]],
+    items: ['Git', 'Docker'],
   },
 ]
 
 export const experience = [
   {
-    role: 'Frontend Developer',
-    company: 'Company Name',
-    period: '2024 – Present',
-    points: ['Built and shipped features used by thousands of users.', 'Improved page speed and accessibility.'],
+    role: 'Cyber Security Intern',
+    company: 'CodeAlpha',
+    period: 'Nov 2026 - Present',
+    points: [
+      'Selected for a virtual Cyber Security Internship, completing hands-on tasks.',
+      'Developing open-source security tools on GitHub.',
+      'Documenting project workflows.',
+    ],
   },
   {
-    role: 'Intern, Web Development',
-    company: 'Another Company',
-    period: '2023 – 2024',
-    points: ['Worked with a small team on a React dashboard.', 'Wrote REST endpoints in Node.js.'],
+    role: 'Student Researcher (Research Intern)',
+    company: 'Elite Research Lab LLC',
+    period: 'Oct 2026 - Present',
+    points: [
+      'Researching post-quantum cryptography, federated learning, and security failure modes.',
+      'Focused on building trustworthy and resilient machine learning architectures.',
+    ],
+  },
+  {
+    role: 'Assistant Secretary of Administration (former)',
+    company: 'NDIURC',
+    period: 'Sep 2019 - Dec 2022',
+    points: [
+      'Conference Management Officer (CMO), Notre Dame College Model United Nations (NDCMUN) 2020.',
+      'Admin, Notre Dame College Model United Nations (NDCMUN) 2022.',
+    ],
   },
 ]
 
 export const education = [
   {
-    degree: 'B.Sc. in Computer Science & Engineering',
-    school: 'Your University',
-    period: '2021 – 2025',
-    note: 'Relevant courses: Algorithms, Databases, Computer Graphics.',
-  },
-  {
-    degree: 'Higher Secondary Certificate',
-    school: 'Your College',
-    period: '2019 – 2021',
-    note: '',
+    degree: 'BS in Computer Science',
+    school: 'BRAC University',
+    period: 'Sept 2022 - Sept 2026',
+    note: 'GPA: 3.68 / 4.00. Coursework: Data Structure, Computer Algorithm, Computer Graphics, Computer Architecture, Automata and Computability, Artificial Intelligence, Machine Learning, Database Systems, System Design, Software Engineering.',
   },
 ]
 
@@ -85,10 +120,19 @@ export const projects = [
 
 export const research = [
   {
-    title: 'Title of Your Paper or Thesis',
-    venue: 'Conference / Journal / University',
-    year: '2025',
-    summary: 'One or two lines about the problem and what you found.',
-    link: '#',
+    title: 'Security Failure Modes in Hybrid Classical-Post-Quantum TLS Deployments: An Empirical Study',
+    venue: '5th IEEE SPICSCON 2026',
+    year: '2026 · Accepted',
+    summary:
+      'An empirical study of how hybrid classical and post-quantum TLS deployments can fail. Co-authored with collaborators and mentors. Accepted for presentation.',
+    link: '',
+  },
+  {
+    title: 'When Efficiency Meets Fragility: Adversarial Vulnerability Shifts in Quantized Medical VLMs',
+    venue: '2nd MICCAI Workshop on Efficient Medical AI (EMA4MICCAI 2026)',
+    year: '2026 · Accepted',
+    summary:
+      'A study of how adversarial vulnerability shifts when medical vision-language models are quantized for efficiency. Solo-authored, taken end-to-end independently. Accepted for presentation.',
+    link: '',
   },
 ]

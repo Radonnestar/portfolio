@@ -41,7 +41,8 @@ export default function Window({
         top: win.y,
         left: win.x,
         width: `min(${app.w}px, 96vw)`,
-        maxHeight: 'calc(100vh - 56px - 48px - 12px)',
+        // never taller than the space between the window's top and the taskbar
+        maxHeight: `calc(100vh - ${win.y}px - 60px)`,
         zIndex: win.z,
       }
 

@@ -94,7 +94,8 @@ function Keyboard() {
   )
 }
 
-export default function Computer({ power, setPower }) {
+// caption: the line currently being spoken ('' when nothing is being said)
+export default function Computer({ power, setPower, caption = '' }) {
   const [lines, setLines] = useState([])
   const isOn = power !== 'off'
   const led = isOn ? '#46f08c' : '#2a5a45'
@@ -218,7 +219,16 @@ export default function Computer({ power, setPower }) {
               }}
             />
             {power === 'booting' && lines.map((l, i) => <div key={i}>{l}</div>)}
-            {power === 'on' && (
+
+            {/* While the greeting is spoken: the current subtitle, on the monitor */}
+            {power === 'on' && caption && (
+              <div key={caption}>
+                {caption} <span className="animate-pulse">_</span>
+              </div>
+            )}
+
+            {/* Otherwise: the welcome screen */}
+            {power === 'on' && !caption && (
               <>
                 {WELCOME.map((l, i) => (
                   <div key={i}>{l || '\u00A0'}</div>
