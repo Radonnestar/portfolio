@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-pixel: "Pixelify Sans", "VT323", monospace;
+  --color-os-gray: #dcdad5;
+  --color-os-red: #e0392d;
+  --color-os-blue: #2b6fd6;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  @apply font-body antialiased overflow-hidden bg-sky-400 text-slate-900;
+}
+
+@keyframes win-pop {
+  from { opacity: 0; transform: scale(0.92) translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.win-pop {
+  animation: win-pop 0.14s ease-out;
+}
