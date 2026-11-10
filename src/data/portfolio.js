@@ -162,6 +162,23 @@ export const projects = [
     code: 'https://github.com/Radonnestar/stride-shop',
     images: ['/projects/stride.png'],
   },
+  {
+    title: 'THEIA: The Interface Architects',
+    tagline: 'A cinematic, scroll-driven 3D landing page for a fictional UI/UX and frontend studio, built around a procedural 35mm projector in a design-studio loft.',
+    description:
+      'THEIA is a five-act scroll experience. The camera moves through a procedurally built studio loft, from a wide overview to a macro of the projector’s reels and gears, a tracking shot past the lens, and a final pull-back to a contact form. Everything in the scene is generated in code, with no imported models or textures. It also has a vibrant glass-style UI that changes accent colour with each act, and an opt-in cinematic audio loop. All studio names, numbers and copy are placeholders.',
+    details: [
+      'Five scroll-driven acts with a single camera timeline, using smooth scrolling (Lenis) synced to GSAP ScrollTrigger',
+      'Fully procedural 3D scene with shadows, depth fog, a volumetric light beam with dust, and custom post-processing (depth of field, halation, film grain)',
+      'Per-act accent colours, glass cards, and an interactive iris that opens when you hover the services',
+      'Procedural Web Audio score: an 18-second looping cinematic swell, off until the visitor opts in',
+      'Live FPS meter measured on the visitor’s GPU, with a prefers-reduced-motion mode and a no-WebGL fallback',
+    ],
+    tags: ['Vite', 'React', 'Tailwind CSS', 'Three.js', 'GSAP', 'ScrollTrigger', 'Lenis', 'Web Audio API', 'Vercel'],
+    live: 'https://theia-app-lime.vercel.app',
+    code: 'https://github.com/Radonnestar/theia-app',
+    images: ['/projects/theia.png'],
+  },
 ]
 
 export const research = [
