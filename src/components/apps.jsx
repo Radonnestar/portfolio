@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { profile, skills, experience, education, projects, research } from '../data/portfolio'
 
@@ -20,6 +20,35 @@ const hasLink = (url) => Boolean(url) && url !== '#'
 
 /* ---------------- About ---------------- */
 function About() {
+  const [showEmail, setShowEmail] = useState(false)
+  const [copied, setCopied] = useState(false)
+  const timer = useRef(null)
+
+  useEffect(() => () => clearTimeout(timer.current), [])
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.email)
+    } catch {
+      // Fallback for browsers that block the clipboard API
+      const ta = document.createElement('textarea')
+      ta.value = profile.email
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      try {
+        document.execCommand('copy')
+      } catch {
+        /* nothing else to try */
+      }
+      document.body.removeChild(ta)
+    }
+    setCopied(true)
+    clearTimeout(timer.current)
+    timer.current = setTimeout(() => setCopied(false), 1800)
+  }
+
   return (
     <div className="space-y-3 p-4 text-sm leading-relaxed text-slate-800">
       <div className="flex items-center gap-3">
@@ -48,18 +77,54 @@ function About() {
       )}
 
       <div className="flex flex-wrap gap-2 pt-1">
-        {profile.links.map((l) => (
-          <a
-            key={l.label}
-            href={l.href}
-            target="_blank"
-            rel="noreferrer"
-            className={`${bevel} px-3 py-1 font-pixel text-xs hover:brightness-95`}
-          >
-            {l.label}
-          </a>
-        ))}
+        {profile.links.map((l) =>
+          l.label === 'Email' ? (
+            <button
+              key={l.label}
+              onClick={() => setShowEmail((v) => !v)}
+              aria-expanded={showEmail}
+              className={`${bevel} px-3 py-1 font-pixel text-xs hover:brightness-95 ${
+                showEmail ? 'brightness-95' : ''
+              }`}
+            >
+              Email
+            </button>
+          ) : (
+            <a
+              key={l.label}
+              href={l.href}
+              target="_blank"
+              rel="noreferrer"
+              className={`${bevel} px-3 py-1 font-pixel text-xs hover:brightness-95`}
+            >
+              {l.label}
+            </a>
+          )
+        )}
       </div>
+
+      {/* Email panel: the address, a copy button, and a mail-app link */}
+      {showEmail && (
+        <div className="flex flex-wrap items-center gap-2 border-2 border-t-gray-500 border-l-gray-500 border-b-white border-r-white bg-slate-50 p-2">
+          <span className="min-w-0 flex-1 select-text break-all font-pixel text-sm text-slate-900">
+            {profile.email}
+          </span>
+          <button
+            onClick={copyEmail}
+            className={`${bevel} shrink-0 px-3 py-1 font-pixel text-xs hover:brightness-95 ${
+              copied ? '!bg-green-200' : ''
+            }`}
+          >
+            {copied ? 'Copied!' : 'Copy'}
+          </button>
+          <a
+            href={`mailto:${profile.email}`}
+            className="shrink-0 font-pixel text-xs text-os-blue hover:underline"
+          >
+            Open mail app
+          </a>
+        </div>
+      )}
     </div>
   )
 }
