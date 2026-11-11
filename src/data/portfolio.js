@@ -97,6 +97,46 @@ export const education = [
 // Images go in client/public/projects/ and are referenced as '/projects/<file>'
 export const projects = [
   {
+    title: 'ScamShield',
+    tagline:
+      'A free, multilingual scam checker where you paste a message or link and Cyber, a roaming robot guide, tells you whether it looks like a scam, an ad or a normal message, and what to do next.',
+    description:
+      'ScamShield helps people in Bangladesh spot fake bKash, Nagad and Robi messages, prize traps and phishing links. A machine-learning model reads the text, a set of link checks looks at the web addresses (look-alike brand names, short links, domain age), and a safety-first rule combines both into one verdict. Cyber explains the result in plain words, can read it aloud, and wanders around the page while you use it. It is a helper, not a guarantee, and it can be wrong.',
+    details: [
+      'Works in English, Bangla (বাংলা) and Banglish, with a spoken explanation',
+      'Combines a text model with link checks, and leans towards caution when unsure',
+      'Shows which words and links pushed the result, marked inside your own message',
+      'Includes a browser extension for Edge and Chrome that checks websites, pasted text and right-clicked links',
+      'Cyber, the animated robot, plays football, drives a car, reads and takes selfies',
+    ],
+    tags: [
+      'Python',
+      'FastAPI',
+      'Uvicorn',
+      'scikit-learn',
+      'pandas',
+      'joblib',
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'SVG',
+      'Canvas',
+      'Web Speech API',
+      'Manifest V3',
+      'RDAP',
+      'Google Safe Browsing API',
+      'Streamlit',
+      'Git',
+      'GitHub',
+      'Vercel',
+    ],
+    live: 'https://scam-shield-ai-umber.vercel.app/',
+    // The repository is private right now. Once it is public, paste
+    // https://github.com/Radonnestar/ScamShield-AI here and the GitHub button will appear.
+    code: '',
+    images: ['/projects/scamshield.png'],
+  },
+  {
     title: 'Nexora',
     tagline: 'A modern, responsive website for a digital agency, with services, portfolio, pricing and contact.',
     description:
