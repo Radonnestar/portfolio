@@ -137,6 +137,41 @@ export const projects = [
     images: ['/projects/scamshield.png'],
   },
   {
+    title: 'The Scurvy Python Sea',
+    tagline:
+      'A pirate-themed Python learning adventure for kids, with a 3D voyage map, real coding challenges and a scripted Captain who teaches along the way.',
+    description:
+      'The Scurvy Python Sea teaches kids Python through a pirate voyage. Ten islands hold 40 lessons, and a scripted Captain Snake guides each one. Kids write and run real Python in the browser, then take on 75 “bounty” coding problems, earn XP, badges and printable certificates, and experiment freely in a code playground. A parent confirms each account by email, and every certificate carries a unique code and QR link that anyone can check on a public verify page.',
+    details: [
+      'Cinematic wanted-poster intro with a slot-machine reward, a hook tearing the poster down and tavern doors opening, all with synthesized sound',
+      '3D voyage map built with Three.js, scrolling from island to island',
+      'Runs real Python in the browser with no server, using Pyodide in a background worker, with 75 auto-judged coding problems',
+      'XP, ranks, badges, and certificates as PNG or PDF with a QR code that links to a public verify page',
+      'Parent email confirmation, plus an admin dashboard with charts of logins, sign-ups and lessons completed',
+    ],
+    tags: [
+      'React 19',
+      'Vite',
+      'GSAP',
+      'Three.js',
+      'CodeMirror 6',
+      'Pyodide',
+      'ASP.NET Core 10',
+      'Entity Framework Core',
+      'PostgreSQL (Neon)',
+      'JWT',
+      'BCrypt',
+      'Brevo',
+      'Vercel',
+      'Render',
+      'Claude',
+    ],
+    live: 'https://scurvy-python-sea-gold.vercel.app',
+    // No GitHub link yet. Paste the repository URL here and the GitHub button will appear.
+    code: '',
+    images: ['/projects/scurvy-python-sea.png'],
+  },
+  {
     title: 'Nexora',
     tagline: 'A modern, responsive website for a digital agency, with services, portfolio, pricing and contact.',
     description:
